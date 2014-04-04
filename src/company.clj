@@ -19,6 +19,6 @@
                       {:loc "Rivendell" :temp 71})))
 
 ;; 1.5 NEEDS WORK
-(def warm_locations (filter #(> (% :temp) 70) locations))
+(def warm_locations (map :loc (filter #(> (% :temp) 70) locations)))
 
 
