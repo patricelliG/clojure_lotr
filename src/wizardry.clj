@@ -1,3 +1,5 @@
+(use '[clojure.string])
+
 (def fellowship [{:name "Frodo", :race "Hobbit"} {:name "Sam", :race "Hobbit"} 
                  {:name "Pippin", :race "Hobbit"} {:name "Merry", :race"Hobbit"} 
                  {:name "Gandalf", :race "Wizard"} {:name "Aragorn", :race "Man"} 
@@ -16,4 +18,9 @@
 (def long_names (map :name (filter #(> (count (% :name)) 5) fellowship)))
 
 ;; 2.5
+(defn makeStr  [chars] (apply str chars))
+(defn get_first [word] (capitalize (makeStr (rest word))))
+(defn get_last [word] (first word))
+(defn latinify "Converts the given word to pig latin." [word] (str (get_first word) "-" (get_last word) "ay" ))
+(def hidden_names (map latinify (map :name fellowship)))
 
