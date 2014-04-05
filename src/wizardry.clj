@@ -1,3 +1,7 @@
+# Written by Gary Patricelli
+# On or about 04/04/2014
+# For CSC 435
+
 (use '[clojure.string])
 
 (def fellowship [{:name "Frodo", :race "Hobbit"} {:name "Sam", :race "Hobbit"} 

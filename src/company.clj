@@ -1,3 +1,8 @@
+# Written by Gary Patricelli
+# On or about 04/04/2014
+# For CSC 435
+
+;; setup
 (def hello "Hello Middle Earth!")
 
 ;; 1.1
@@ -18,7 +23,7 @@
                       {:loc "Mordor" :temp 117}
                       {:loc "Rivendell" :temp 71})))
 
-;; 1.5 NEEDS WORK
+;; 1.5 
 (def warm_locations (map :loc (filter #(> (% :temp) 70) locations)))
 
 
